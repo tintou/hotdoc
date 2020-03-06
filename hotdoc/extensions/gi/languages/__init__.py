@@ -19,6 +19,9 @@
 A set of languages with no external dependencies
 """
 
+from hotdoc.extensions.gi.languages.vala import (
+    ValaLanguage)
+
 from hotdoc.extensions.gi.languages.javascript import (
     JavascriptLanguage)
 
@@ -32,6 +35,6 @@ def get_language_classes():
     """
     Hotdoc's setuptools entry point
     """
-    res = [JavascriptLanguage, PythonLanguage, CLanguage]
+    res = [ValaLanguage, JavascriptLanguage, PythonLanguage, CLanguage]
 
     return res

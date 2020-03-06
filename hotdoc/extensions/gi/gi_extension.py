@@ -142,6 +142,7 @@ class GIExtension(Extension):
         chosen_languages = [l.lower() for l in config.get('languages', [])]
         languages = []
         for lang_type in get_language_classes():
+            self.warn("no-location-indication", "LANG: %s" % lang_type.language_name)
             if lang_type.language_name in chosen_languages:
                 languages.append(lang_type())
 
